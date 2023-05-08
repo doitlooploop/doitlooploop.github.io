@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html><head>
+ <meta charset="UTF-8">
+		<title>Truc</title>
+	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script src="jsspeccy_fitxers/jdataview.js"></script>
+		<script src="jsspeccy_fitxers/jsspeccy-core.js"></script>
+
+
+
+		<style>
+			body {
+
+				padding: 10px 20px
+			}
+		</style>
+		<script>
+			$(function() {
+				var jsspeccy = JSSpeccy('jsspeccy-viewport', {'autostart': true});
+
+				/*
+				JSSpeccy.UI({
+					container: 'jsspeccy',
+					controller: jsspeccy
+				});
+
+				$('#example-games').change(function() {
+					var filename = $(this).val();
+					if (filename) {
+						jsspeccy.loadFromUrl(
+							'./' + filename,
+							{'autoload': true}
+						);
+					}
+				})*/
+				var filename = "truc.sna";
+				if (filename) {
+						jsspeccy.loadFromUrl(
+							'./' + filename,
+							{'autoload': true}
+						);
+					}
+			});
+		</script>
+	</head>
+	<body>
+
+
+
+    <!-- Button HTML (to Trigger Modal) -->
+    <a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Regles</a>
+    <br/><br/>
+
+
+
+    <!-- Modal HTML -->
+
+    <div id="myModal" class="modal fade">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                    <h4 class="modal-title">Regles del Truc</h4>
+
+                </div>
+
+                <div class="modal-body">
+
+
+<b>Introducció</b>
+<p>
+  El truc és un joc de cartes que es juga en moltes comarques del País Valencià.
+  L'autèntic truc es juga entre quatre persones que formen dues parelles oposades.
+  En aquest programa s'hi juga la variant reduïda de dos jugadors.
+</p>
+
+<b>Objectiu</b>
+
+<p>
+  Cada jugador rep tres cartes que jugaran alternativament guanyant punts qui guanye dues de les tres bases.
+  Guanya una basa qui juga la carta de major valor.En la basa següent comença a jugar qui ha guanyat l'anterior.
+  El valor de les cartes s'hi detalla en l'apartat següent.
+</p>
+
+<b>Valor de les cartes</b>
+<p>
+Les vint-i-dos cartes que juguen són les següents, ordenades de major a menor valor.
+
+<ul>
+<li>As d'espases (la major)</li>
+<li>As de bastos (la segona)</li>
+<li>7 d'espases (manilla d'espases)</li>
+<li>7 d'ors (manilla d'ors)</li>
+<li>Els tresos</li>
+<li>7 de copes i de bastos</li>
+<li>Sisos</li>
+<li>Cincs</li>
+<li>Quatres</li>
+</ul>
+
+Si es juga tapada la carta pren un valor mínim.
+</p>
+
+<b>Punts al truc</b>
+<p>
+<ul>
+<li>En cas d'empatar una basa, aquesta la guanya qui haja guanyat la primera basa.</li>
+<li>Si s'empata la primera basa, guanya aquesta qui guanye la segona. </li>
+<li>Si s'empaten les tres cartes puntua qui va a mà. </li>
+<li>Guanya la partida qui fa dues cames.Una cama són vint-i-quatre punts (dotze roïns
+  i dotze bons).</li>
+<li>L'ordre d'aposta és alternatiu i és el següent: truc(2 punts), retruc(3), quatre(4);joc fora (la cama). </li>
+</ul>
+</p>
+
+<b>Punts a l'envit</b>
+<p>
+	<ul>
+<li>A part del truc també es pot apostar punts a l'envit.</li>
+<li>Si un jugador té dues cartes del mateix pal es diu que té lligat i el seu valor és el resultat de sumar les dues cartes i afegir- li vint.</li>
+<li>Envidar és apostar punts al lligat més alt. Si ningú té lligat guanya la carta més alta. En cas d'empat puntua qui va a mà.</li>
+<li>Si es vol envidar s'ha de fer abans de jugar cap carta.</li>
+<li>L'ordre d'augment d'aposta és: envit(2pts), tornar a envidar(4), la falta.</li>
+<li>Es pot envidar la falta directament sense passar per l'envit ni pel torne.</li>
+<li>La falta significa tota la cama en el cas d'estar els dos jugadors en roïnes. Si algú
+   ja està en bones la falta és tants punts com li falten a qui en tinga més.</li>
+<li>No es poden envidar un nombre superior de punts als que li falten a qui va davant.</li>
+<li>Si els dos jugadors acaben una cama alhora, se l'apunta qui haja guanyat l'envit.</li>
+</ul>
+</p>
+
+<b>Consells</b>
+<p>
+  Bo, i això és tot, un breu resum del joc del truc.
+  Recorda que un bon trucador ha de fer molts farols (l'ordinador en fa).
+  Gaudeix, però no oblides que per a un bon truc s'ha de jugar amb tres companys a la taverna del poble i amb una bona copa.</p>
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Eixir</button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+			<div id="jsspeccy-viewport" >
+				<div style="position: relative;">
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+</body></html>
